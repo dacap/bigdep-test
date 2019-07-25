@@ -1,6 +1,13 @@
 cmake_minimum_required(VERSION 3.12)
 
 set(CMAKE_BUILD_TYPE "Release" CACHE STRING "" FORCE)
+
+# Makes usesmall_with_bigsmall just like usebig
+#set(CMAKE_CXX_FLAGS "" CACHE STRING "" FORCE)
+#set(CMAKE_EXE_LINKER_FLAGS "" CACHE STRING "" FORCE)
+
+# Makes usesmall_with_bigsmall smaller
+set(CMAKE_CXX_FLAGS "" CACHE STRING "" FORCE)
 set(CMAKE_EXE_LINKER_FLAGS "-dead_strip" CACHE STRING "" FORCE)
 
 add_library(big big.cpp)
